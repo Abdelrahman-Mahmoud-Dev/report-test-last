@@ -1,0 +1,381 @@
+{
+  "Name": "Report",
+  "Width": "6.2604in",
+  "Layers": [ { "Name": "default" } ],
+  "CustomProperties": [
+    {
+      "Name": "DisplayType",
+      "Value": "Page"
+    },
+    {
+      "Name": "SizeType",
+      "Value": "Default"
+    },
+    {
+      "Name": "PaperOrientation",
+      "Value": "Portrait"
+    }
+  ],
+  "Page": {
+    "PageWidth": "8.5in",
+    "PageHeight": "11in",
+    "RightMargin": "1in",
+    "LeftMargin": "1in",
+    "TopMargin": "1in",
+    "BottomMargin": "1in",
+    "Columns": 1,
+    "ColumnSpacing": "0in"
+  },
+  "DataSources": [
+    {
+      "Name": "DataSource",
+      "ConnectionProperties": {
+        "DataProvider": "JSON",
+        "ConnectString": "endpoint=https://api-dev.finiexsoft.net/api/v1/accounting/reports/vat-statement-report?orderBy=&from=2020-12-31T22:00:00.000Z&to=2021-12-30T22:00:00.000Z&numFrom=1&numTo=10000&"
+      }
+    }
+  ],
+  "Body": {
+    "Height": "0.5in",
+    "ReportItems": [
+      {
+        "Type": "table",
+        "Name": "Table1",
+        "DataSetName": "data",
+        "TableColumns": [
+          { "Width": "1in" },
+          { "Width": "1in" },
+          { "Width": "1in" },
+          { "Width": "1in" },
+          { "Width": "1in" },
+          { "Width": "1in" }
+        ],
+        "Header": {
+          "TableRows": [
+            {
+              "Height": "0.25in",
+              "TableCells": [
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox1",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "id",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox2",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "invoiceNo",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox3",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "invoiceDate",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox4",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "invoiceType",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox5",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "docType",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox6",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "providerCustomerName",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                }
+              ]
+            }
+          ],
+          "RepeatOnNewPage": true
+        },
+        "Details": {
+          "TableRows": [
+            {
+              "Height": "0.25in",
+              "TableCells": [
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox7",
+                    "DataElementName": "id",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!id.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox8",
+                    "DataElementName": "invoiceNo",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!invoiceNo.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox9",
+                    "DataElementName": "invoiceDate",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!invoiceDate.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox10",
+                    "DataElementName": "invoiceType",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!invoiceType.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox11",
+                    "DataElementName": "docType",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!docType.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox12",
+                    "DataElementName": "providerCustomerName",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!providerCustomerName.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "1in",
+                    "Height": "0.25in"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Left": "0.2604in",
+        "Width": "6in",
+        "Height": "0.5in"
+      }
+    ]
+  },
+  "DataSets": [
+    {
+      "Name": "DataSet",
+      "Fields": [
+        {
+          "Name": "statusCode",
+          "DataField": "statusCode"
+        },
+        {
+          "Name": "meta.netTotal",
+          "DataField": "meta.netTotal"
+        },
+        {
+          "Name": "succeeded",
+          "DataField": "succeeded"
+        },
+        {
+          "Name": "message",
+          "DataField": "message"
+        },
+        {
+          "Name": "errors",
+          "DataField": "errors"
+        },
+        {
+          "Name": "data",
+          "DataField": "data"
+        }
+      ],
+      "Query": {
+        "DataSourceName": "DataSource",
+        "CommandText": "uri=https://api-dev.finiexsoft.net/api/v1/accounting/reports/vat-statement-report?orderBy=&from=2020-12-31T22:00:00.000Z&to=2021-12-30T22:00:00.000Z&numFrom=1&numTo=10000&;jpath=$"
+      },
+      "CaseSensitivity": "Auto",
+      "KanatypeSensitivity": "Auto",
+      "AccentSensitivity": "Auto",
+      "WidthSensitivity": "Auto"
+    },
+    {
+      "Name": "data",
+      "Fields": [
+        {
+          "Name": "id",
+          "DataField": "id"
+        },
+        {
+          "Name": "invoiceNo",
+          "DataField": "invoiceNo"
+        },
+        {
+          "Name": "invoiceDate",
+          "DataField": "invoiceDate"
+        },
+        {
+          "Name": "invoiceType",
+          "DataField": "invoiceType"
+        },
+        {
+          "Name": "docType",
+          "DataField": "docType"
+        },
+        {
+          "Name": "providerCustomerName",
+          "DataField": "providerCustomerName"
+        },
+        {
+          "Name": "invoiceTotal",
+          "DataField": "invoiceTotal"
+        },
+        {
+          "Name": "invoiceDiscount",
+          "DataField": "invoiceDiscount"
+        },
+        {
+          "Name": "taxValue",
+          "DataField": "taxValue"
+        },
+        {
+          "Name": "invoiceNetValue",
+          "DataField": "invoiceNetValue"
+        },
+        {
+          "Name": "taxNo",
+          "DataField": "taxNo"
+        }
+      ],
+      "Query": { "DataSourceName": "$dataset:DataSet/data" },
+      "CaseSensitivity": "Auto",
+      "KanatypeSensitivity": "Auto",
+      "AccentSensitivity": "Auto",
+      "WidthSensitivity": "Auto"
+    }
+  ]
+}

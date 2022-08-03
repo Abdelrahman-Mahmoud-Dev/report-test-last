@@ -1,0 +1,402 @@
+{
+  "Name": "Report",
+  "Width": "6.4444in",
+  "Layers": [ { "Name": "default" } ],
+  "CustomProperties": [
+    {
+      "Name": "DisplayType",
+      "Value": "Page"
+    },
+    {
+      "Name": "SizeType",
+      "Value": "Default"
+    },
+    {
+      "Name": "PaperOrientation",
+      "Value": "Portrait"
+    }
+  ],
+  "Page": {
+    "PageWidth": "8.5in",
+    "PageHeight": "11in",
+    "RightMargin": "1in",
+    "LeftMargin": "1in",
+    "TopMargin": "1in",
+    "BottomMargin": "1in",
+    "Columns": 1,
+    "ColumnSpacing": "0in"
+  },
+  "DataSources": [
+    {
+      "Name": "DataSource",
+      "ConnectionProperties": {
+        "DataProvider": "JSON",
+        "ConnectString": "endpoint=https://api-dev.finiexsoft.net/api/v1/accounting/account-card/parent/1000"
+      }
+    }
+  ]
+  ,
+  "Body": {
+    "Height": "0.5in",
+    "ReportItems": [
+      {
+        "Type": "table",
+        "Name": "Table1",
+        "DataSetName": "data",
+        "TableColumns": [
+          { "Width": "0.9141in" },
+          { "Width": "0.9141in" },
+          { "Width": "0.9141in" },
+          { "Width": "0.9141in" },
+          { "Width": "0.9141in" },
+          { "Width": "0.9141in" },
+          { "Width": "0.914in" }
+        ],
+        "Header": {
+          "TableRows": [
+            {
+              "Height": "0.25in",
+              "TableCells": [
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox1",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "id",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox2",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "accID",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox3",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "accName",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox4",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "mainFinalAccount",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox5",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "joinCostCenter",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox6",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "balance",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox7",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "hasChildren",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.914in",
+                    "Height": "0.25in"
+                  }
+                }
+              ]
+            }
+          ],
+          "RepeatOnNewPage": true
+        },
+        "Details": {
+          "TableRows": [
+            {
+              "Height": "0.25in",
+              "TableCells": [
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox8",
+                    "DataElementName": "id",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!id.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox9",
+                    "DataElementName": "accID",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!accID.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox10",
+                    "DataElementName": "accName",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!accName.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox11",
+                    "DataElementName": "mainFinalAccount",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!mainFinalAccount.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox12",
+                    "DataElementName": "joinCostCenter",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!joinCostCenter.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox13",
+                    "DataElementName": "balance",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!balance.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.9141in",
+                    "Height": "0.25in"
+                  }
+                },
+                {
+                  "Item": {
+                    "Type": "textbox",
+                    "Name": "TextBox14",
+                    "DataElementName": "hasChildren",
+                    "CanGrow": true,
+                    "KeepTogether": true,
+                    "Value": "=Fields!hasChildren.Value",
+                    "Style": {
+                      "PaddingLeft": "2pt",
+                      "PaddingRight": "2pt",
+                      "PaddingTop": "2pt",
+                      "PaddingBottom": "2pt"
+                    },
+                    "Width": "0.914in",
+                    "Height": "0.25in"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Left": "0.0458in",
+        "Width": "6.3986in",
+        "Height": "0.5in"
+      }
+    ]
+  },
+  "DataSets": [
+    {
+      "Name": "DataSet",
+      "Fields": [
+        {
+          "Name": "statusCode",
+          "DataField": "statusCode"
+        },
+        {
+          "Name": "meta",
+          "DataField": "meta"
+        },
+        {
+          "Name": "succeeded",
+          "DataField": "succeeded"
+        },
+        {
+          "Name": "message",
+          "DataField": "message"
+        },
+        {
+          "Name": "errors",
+          "DataField": "errors"
+        },
+        {
+          "Name": "data",
+          "DataField": "data"
+        }
+      ],
+      "Query": {
+        "DataSourceName": "DataSource",
+        "CommandText": "uri=https://api-dev.finiexsoft.net/api/v1/accounting/account-card/parent/1000;jpath=$"
+      },
+      "CaseSensitivity": "Auto",
+      "KanatypeSensitivity": "Auto",
+      "AccentSensitivity": "Auto",
+      "WidthSensitivity": "Auto"
+    },
+    {
+      "Name": "data",
+      "Fields": [
+        {
+          "Name": "id",
+          "DataField": "id"
+        },
+        {
+          "Name": "accID",
+          "DataField": "accID"
+        },
+        {
+          "Name": "accName",
+          "DataField": "accName"
+        },
+        {
+          "Name": "mainFinalAccount",
+          "DataField": "mainFinalAccount"
+        },
+        {
+          "Name": "joinCostCenter",
+          "DataField": "joinCostCenter"
+        },
+        {
+          "Name": "balance",
+          "DataField": "balance"
+        },
+        {
+          "Name": "hasChildren",
+          "DataField": "hasChildren"
+        }
+      ],
+      "Query": { "DataSourceName": "$dataset:DataSet/data" },
+      "CaseSensitivity": "Auto",
+      "KanatypeSensitivity": "Auto",
+      "AccentSensitivity": "Auto",
+      "WidthSensitivity": "Auto"
+    }
+  ]
+}
